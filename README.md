@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# 📊 Expense Tracker (React Native + Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and elegant mobile app to track daily expenses with features
+like sorting, priority indicators, data analysis, and CSV
+import/export.\
+This is one of my first full-fledged React Native + Expo apps.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- ➕ Add, ✏️ Edit, 🗑️ Delete expense items\
+- 🏷️ Fields: **title, amount, date, priority, author**
+- 🎨 Priority color indicators (URGENT, HIGH, MEDIUM, LOW)
+- ↔️ Swipe-to-delete (left → right)
+- 🔍 Sort by **amount, date, priority**
+- 📦 Local storage using **SQLite** (data persists even after closing
+  app)
+- 📈 Analysis screen with **line chart** (weekly & monthly expenses)
+- 📤 Export all expenses to CSV & share (WhatsApp, etc.)
+- 📥 Import expenses from CSV
+- 🎛️ Clean, Groww-inspired UI (dark theme planned)
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🧰 Tech Stack
 
-In the output, you'll find options to open the app in a
+- **React Native + Expo (TypeScript)**
+- **Expo SQLite** (local database)
+- **react-native-chart-kit** (analytics chart)
+- **CSV parser** (for import/export)
+- **Expo Router** (navigation)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Folder Structure
 
-## Get a fresh project
+    Expense-Tracker/
+    │
+    ├── app/                 # Main application source
+    │   ├── components/      # HeaderSort, ExpenseItem, DrawerForm, etc.
+    │   ├── assets/          # Icons, images
+    │   ├── utils/           # Helpers (DB, CSV, formatting)
+    │   └── ...              # Screens, hooks, context, etc.
+    │
+    ├── package.json
+    ├── app.json
+    ├── tsconfig.json
+    └── README.md
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🛠️ Installation & Setup
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1.  Clone the repository
 
-## Learn more
+    ```bash
+    git clone https://github.com/ExploreWithMeet/Expense-Tracker.git
+    ```
 
-To learn more about developing your project with Expo, look at the following resources:
+2.  Navigate to project
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+    ```bash
+    cd Expense-Tracker
+    ```
 
-## Join the community
+3.  Install dependencies
 
-Join our community of developers creating universal apps.
+    ```bash
+    npm install
+    ```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4.  Start the development server
+
+    ```bash
+    npx expo start
+    ```
+
+5.  Open the app using Expo Go or an emulator.
+
+---
+
+## 🎯 How to Use
+
+- Add expenses through the drawer-based form\
+- Long-press an item → Edit\
+- Swipe an item → Delete\
+- Sort using the header controls\
+- Visit **Analysis** tab for weekly/monthly trends\
+- Export → CSV (then share)\
+- Import → Choose CSV file and load data
+
+---
+
+## 🛣️ Future Improvements
+
+- Dark theme (Groww-style)
+- Expense categories (Food, Travel, Shopping, etc.)
+- Recurring expenses
+- Yearly summary dashboard
+- Cloud backup / sync
+- Enhanced CSV validation
+
+---
+
+## 🧑‍💻 Author
+
+Built by **M.S (ExploreWithMeet)** --- Student & developer learning
+full-stack & mobile development.
